@@ -111,7 +111,7 @@ dd a:hover {
   color: white;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 925px) {
   .row, .navbar {   
     flex-direction: column;
   }
