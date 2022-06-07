@@ -21,9 +21,15 @@
   }
   
   /* Change color on hover */
-  .navbar a:hover {
+  .navbar .nom:hover {
     background-color: #ddd;
     color: black;
+  }
+
+
+  img{ 
+    height: 75px;
+    opacity: 50%;
   }
   
 * {
@@ -52,6 +58,17 @@
     padding: 5px;
     background: #f4f4f4;
     margin: 5px 0;
+  }
+
+  .fackImg{
+    background-color: #333;
+    display: block;
+    padding: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 50%;
+    object-fit: contain;
   }
   
   header {

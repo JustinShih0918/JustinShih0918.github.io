@@ -3,13 +3,16 @@ const nameInput = document.querySelector('#name');
 const passwordInput = document.querySelector('#password');
 const msgN = document.querySelector('.msgN');
 const msgP = document.querySelector('.msgP');
+const h = document.querySelector('.Logout');
 
 myForm.addEventListener('submit' , whenLogin);
-console.log(msgP.textContent);
+
+
 function whenLogin(e){
     e.preventDefault();
     let a = false;
     let b = false;
+    let style = true;
     if(nameInput.value === ''){
         msgN.textContent = 'Please enter your User name'
         console.log(msgN.textContent);
@@ -38,14 +41,45 @@ function whenLogin(e){
 
     console.log(a);
     console.log(b);
+
     if(a == true && b == true){
-        window.alert('We will back to  Home now ')
-        window.location.href = '/home.html';
+        // const Img = document.createElement('img');
+        // Img.src = '../photos/好忙好累好想睡.png'
+        // h.appendChild(Img);
+
+        h.textContent = `${nameInput.value}`;
+
+        if(style == true){
+            h.addEventListener('mouseover' , over);
+            h.addEventListener('mouseout' , out);
+            h.addEventListener('click' , whenClick);
+        }
+        
+        if(style == false){
+            console.log('i am here');
+            h.removeEventListener('mouseover' , over);
+            h.removeEventListener('mouseout' , out);
+        }
+        // window.alert('We will back to  Home now ')
+        // window.location.href = '/index.html';
     }
-
-
 
     nameInput.value = '';
     passwordInput.value = '';
+}
 
+function over(){
+    h.style.backgroundColor = '#ddd';
+    h.style.color = 'black';
+}
+
+function out(){
+    h.style.backgroundColor = '#333';
+    h.style.color = 'white';
+}
+
+function whenClick(){
+    h.textContent = '';
+    style = false;
+    console.log(style);
 }

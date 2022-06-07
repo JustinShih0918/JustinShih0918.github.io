@@ -76,16 +76,6 @@
     padding: 20px;
   }
   
-  img{
-    background-color: #aaa;
-    display: block;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 100%;
-    object-fit: contain;
-  }
   
   /* Footer */
   .footer {
