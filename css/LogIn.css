@@ -111,6 +111,16 @@
     margin: 5px;
   }
 
+  .msgN{
+    font-size: 8px;
+    color: red;
+  }
+
+  .msgP{
+    font-size: 8px;
+    color: red;
+  }
+
   .Adduser {
     text-align: right;
   }
