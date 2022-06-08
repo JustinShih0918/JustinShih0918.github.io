@@ -39,30 +39,16 @@ function whenLogin(e){
         b = true;
     }
 
-    console.log(a);
-    console.log(b);
-
-    if(a == true && b == true){
-        // const Img = document.createElement('img');
-        // Img.src = '../photos/好忙好累好想睡.png'
-        // h.appendChild(Img);
-
+    if(a == true && b == true && style == true){
         h.textContent = `${nameInput.value}`;
+        h.addEventListener('mouseover' , over);
+        h.addEventListener('mouseout' , out);
+        h.addEventListener('click' , whenClick);
 
-        if(style == true){
-            h.addEventListener('mouseover' , over);
-            h.addEventListener('mouseout' , out);
-            h.addEventListener('click' , whenClick);
-        }
-        
-        if(style == false){
-            console.log('i am here');
-            h.removeEventListener('mouseover' , over);
-            h.removeEventListener('mouseout' , out);
-        }
         // window.alert('We will back to  Home now ')
         // window.location.href = '/index.html';
     }
+
 
     nameInput.value = '';
     passwordInput.value = '';
@@ -81,5 +67,9 @@ function out(){
 function whenClick(){
     h.textContent = '';
     style = false;
+    h.removeEventListener('mouseover' , over);
+    h.removeEventListener('mouseout' , out);
+    h.style.backgroundColor = '#333';
+    h.style.color = 'white';
     console.log(style);
 }

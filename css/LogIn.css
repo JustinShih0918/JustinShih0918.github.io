@@ -25,12 +25,6 @@
     background-color: #ddd;
     color: black;
   }
-
-
-  img{ 
-    height: 75px;
-    opacity: 50%;
-  }
   
 * {
     margin: 0;
@@ -59,29 +53,11 @@
     background: #f4f4f4;
     margin: 5px 0;
   }
-
-  .fackImg{
-    background-color: #333;
-    display: block;
-    padding: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    width: 50%;
-    object-fit: contain;
-  }
   
   header {
     background: #f4f4f4;
     padding: 1rem;
     text-align: center;
-  }
-  
-  .container {
-    margin: auto;
-    width: 500px;
-    overflow: auto;
-    padding: 3rem 2rem;
   }
   
   #my-form {
