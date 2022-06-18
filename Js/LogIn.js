@@ -15,7 +15,6 @@ function whenLogin(e){
     let style = true;
     if(nameInput.value === ''){
         msgN.textContent = 'Please enter your User name'
-        console.log(msgN.textContent);
         setTimeout(()=>{msgN.textContent = '';}, 3000);
         a = false;
     }else{
@@ -25,15 +24,13 @@ function whenLogin(e){
 
     if(passwordInput.value === ''){
         msgP.textContent = 'Please enter your password'
-        console.log(msgP.textContent);
         setTimeout(()=>{msgP.textContent = ''}, 3000);
-        a = false;
+        b = false;
     }
     else if(passwordInput.value.length<8){
         msgP.textContent = 'Your password is less than 8 words'
-        console.log(msgP.textContent);
-        setTimeout(()=>{msgP.textContent = ''}, 5000);
-        a = false;
+        setTimeout(()=>{msgP.textContent = ''}, 3000);
+        b = false;
     }
     else{
         b = true;
@@ -45,8 +42,8 @@ function whenLogin(e){
         h.addEventListener('mouseout' , out);
         h.addEventListener('click' , whenClick);
 
-        // window.alert('We will back to  Home now ')
-        // window.location.href = '/index.html';
+        window.alert('Log in Success, We will back to Home now ')
+        window.location.href = '/index.html';
     }
 
 

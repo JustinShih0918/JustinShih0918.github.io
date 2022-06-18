@@ -111,8 +111,19 @@
     margin: 5px;
   }
 
-  .Adduser {
-    text-align: right;
+  .msgN {
+    font-size: 8px;
+    color: red;
+  }
+
+  .msgP {
+    font-size: 8px;
+    color: red;
+  }
+
+  .msgE {
+    font-size: 8px;
+    color: red;
   }
 
   /* Footer */
