@@ -3,9 +3,10 @@ const nameInput = document.querySelector('#name');
 const passwordInput = document.querySelector('#password');
 const msgN = document.querySelector('.msgN');
 const msgP = document.querySelector('.msgP');
-const h = document.querySelector('.Logout');
+const h1 = document.querySelector('.Logout1');
 
 myForm.addEventListener('submit' , whenLogin);
+
 
 
 function whenLogin(e){
@@ -37,13 +38,12 @@ function whenLogin(e){
     }
 
     if(a == true && b == true && style == true){
-        h.textContent = `${nameInput.value}`;
-        h.addEventListener('mouseover' , over);
-        h.addEventListener('mouseout' , out);
-        h.addEventListener('click' , whenClick);
-
-        window.alert('Log in Success, We will back to Home now ')
-        window.location.href = '/index.html';
+        h1.textContent = `${nameInput.value}`;
+        h1.addEventListener('mouseover' , over);
+        h1.addEventListener('mouseout' , out);
+        h1.addEventListener('click' , whenClick);
+        // window.alert('Log in Success, We will back to Home now ')
+        // window.location.href = '/index.html';
     }
 
 
@@ -52,21 +52,21 @@ function whenLogin(e){
 }
 
 function over(){
-    h.style.backgroundColor = '#ddd';
-    h.style.color = 'black';
+    h1.style.backgroundColor = '#ddd';
+    h1.style.color = 'black';
 }
 
 function out(){
-    h.style.backgroundColor = '#333';
-    h.style.color = 'white';
+    h1.style.backgroundColor = '#333';
+    h1.style.color = 'white';
 }
 
 function whenClick(){
-    h.textContent = '';
+    h1.textContent = '';
     style = false;
-    h.removeEventListener('mouseover' , over);
-    h.removeEventListener('mouseout' , out);
-    h.style.backgroundColor = '#333';
-    h.style.color = 'white';
+    h1.removeEventListener('mouseover' , over);
+    h1.removeEventListener('mouseout' , out);
+    h1.style.backgroundColor = '#333';
+    h1.style.color = 'white';
     console.log(style);
 }
